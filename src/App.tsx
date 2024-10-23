@@ -243,7 +243,7 @@ export default function PDFViewer() {
                 onLoadError={(error) => console.error('Load Error:', error)}
                 onLoadSuccess={onDocumentLoadSuccess}
               >
-                {Array.from(new Array(totalPages), (el, index) => {
+                {Array.from(new Array(totalPages), (_, index) => {
                   const { width, height } = calculatePageDimensions(800, 1000); // Adjust base width and height
                   return (
                     <div
